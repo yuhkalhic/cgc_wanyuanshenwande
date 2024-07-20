@@ -7,3 +7,25 @@ build
 或者
 g++ -O3 -march=native -funroll-loops -flto -ffast-math -pthread -fopenmp -mavx512f source_code.cpp -o ../wanyuanshenwande.exe
 
+依赖环境
+在编译和运行程序之前，确保系统已安装以下依赖库和工具：
+g++ 编译器：支持 C++11 及以上标准。
+pthread 库：用于多线程支持。
+AVX 指令集支持：用于 SIMD 向量化。
+
+编译选项
+我们使用了以下编译选项来优化代码执行效率：
+-O2：启用基本的优化选项。
+-march=native：生成与当前处理器架构相关的代码。
+-funroll-loops：展开循环以减少循环开销。
+-flto：启用链接时优化（Link Time Optimization）。
+-ffast-math：启用快速数学运算优化。
+-mavx：启用 AVX 指令集支持。
+
+实验环境
+处理器：Intel(R) Xeon(R) Gold 5218R CPU @ 2.10GHz
+内存：256GB
+操作系统：Ubuntu 18.04.6
+编译器：g++ 7.5.0
+编译命令：g++ -O2 -march=native -funroll-loops -flto -ffast-math -lpthread -mavx2 gcn.cpp
+-o ../example.exe
