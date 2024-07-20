@@ -2,13 +2,8 @@
 本文件没有使用第三方库，因此不需要额外进行安装配置。
 
 编译方式：
-
-```
 make
 build
-```
-
 或者
-'''
 g++ -O3 -march=native -funroll-loops -flto -ffast-math -pthread -fopenmp -mavx512f source_code.cpp -o ../wanyuanshenwande.exe
-'''
+
